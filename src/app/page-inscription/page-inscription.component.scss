@@ -1,0 +1,44 @@
+
+.container{
+  display: flex;
+  justify-content: center;
+  margin: 2% 0% 2% 0%;
+}
+
+.example-card {
+  width: 50%;
+}
+.w{
+  &-100{
+    width: 100%;
+  }
+  &-45{
+    width: 45%;
+  }
+}
+
+mat-card{
+  &-title{
+  font-size: 4rem;
+  }
+  &-header{
+    display: flex;
+    justify-content: center;
+    margin: 2% 0 2% 0;
+  }
+  &-content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &-actions{
+
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  display: flex;
+  align-content: center;
+  align-items: center;
+}

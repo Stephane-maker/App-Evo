@@ -1,0 +1,88 @@
+
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="container" >
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Inscription</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form [formGroup]="connexionForm"  novalidate>
+        <mat-form-field class=" w-100">
+          <mat-label>Email</mat-label>
+          <input  type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" required>
+          <mat-error *ngIf="connexionForm.hasError('email') && !connexionForm.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+        <mat-form-field class=" w-100">
+          <mat-label>Password</mat-label>
+          <input  type="password" matInput formControlName="password" placeholder="Ex. 1234" required>
+          <mat-error *ngIf="connexionForm.hasError('password') && !connexionForm.hasError('required')">
+            Please enter a valid password address
+          </mat-error>
+          <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+        <mat-form-field class=" w-100">
+          <mat-label>confirmPassword</mat-label>
+          <input  type="password" matInput formControlName="confirmPassword" placeholder="Ex. 1234" required>
+          <mat-error *ngIf="connexionForm.hasError('confirmPasswordn') && !connexionForm.hasError('required')">
+            Please enter a valid password address
+          </mat-error>
+          <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+
+        <mat-card-content>
+          <mat-form-field class="w-45">
+            <mat-label>Name</mat-label>
+            <input  type="text" matInput formControlName="userName" placeholder="MyName" required>
+            <mat-error *ngIf="connexionForm.hasError('userName') && !connexionForm.hasError('required')">
+              Please enter a valid password address
+            </mat-error>
+            <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+          <mat-form-field class="w-45">
+            <mat-label>LastName</mat-label>
+            <input  type="text" matInput formControlName="lastName" placeholder="My last Name" required>
+            <mat-error *ngIf="connexionForm.hasError('lastName') && !connexionForm.hasError('required')">
+              Please enter a valid password address
+            </mat-error>
+            <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+              Email is <strong>required</strong>
+            </mat-error> -->
+          </mat-form-field>
+        </mat-card-content>
+      </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" (click)="test()" mat-flat-button color="primary">Envoyer</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>
