@@ -26,11 +26,13 @@ export class PageInscriptionComponent {
 
   constructor(private fb: FormBuilder, private RAS : RequeteApiService) { }
   test(){
-    console.log("hello world!");
-    console.log(this.connexionForm.value.email);
-    console.log(this.connexionForm.valid);
-    this.RAS.InscriptionUser(this.connexionForm.value.email, this.connexionForm.value.password, this.connexionForm.value.confirmPassword, this.connexionForm.value.userName, this.connexionForm.value.lastName).subscribe(data => {
-      console.log(data);
-    }, (err) => { console.log(err); });
+    if (this.connexionForm.valid && this.connexionForm.value.password == this.connexionForm.value.confirmPassword ) {
+      console.log("hello world!");
+      console.log(this.connexionForm.value.email);
+      console.log(this.connexionForm.valid);
+      this.RAS.InscriptionUser(this.connexionForm.value.email, this.connexionForm.value.password, this.connexionForm.value.confirmPassword, this.connexionForm.value.userName, this.connexionForm.value.lastName).subscribe(data => {
+        console.log(data);
+      }, (err) => { console.log(err); });
+    }
   }
 }

@@ -1,0 +1,54 @@
+<mat-toolbar>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<div class="container" >
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Inscription</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+
+      <form [formGroup]="connexionForm"  novalidate>
+        <mat-form-field class=" w-100">
+          <mat-label>Email</mat-label>
+          <input  type="email" matInput formControlName="email" placeholder="Ex. pat@example.com" required>
+          <mat-error *ngIf="connexionForm.hasError('email') && !connexionForm.hasError('required')">
+            Please enter a valid email address
+          </mat-error>
+          <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+        <mat-form-field class=" w-100">
+          <mat-label>Password</mat-label>
+          <input type="passsword" matInput formControlName="passsword" placeholder="Ex. 1234" required>
+          <mat-error *ngIf="connexionForm.hasError('passsword') && !connexionForm.hasError('required')">
+            Please enter a valid passsword address
+          </mat-error>
+          <!-- <mat-error *ngIf="connexionForm.hasError('required')">
+            Email is <strong>required</strong>
+          </mat-error> -->
+        </mat-form-field>
+      </form>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button type="submit" (click)="connect()" mat-flat-button color="primary">Envoyer</button>
+    </mat-card-actions>
+
+  </mat-card>
+
+</div>

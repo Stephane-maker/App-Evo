@@ -9,17 +9,28 @@ import { InscriptionModelModule } from '../inscription-model/inscription-model.m
 @Injectable({
   providedIn: 'root'
 })
-export class RequeteApiService {
+export class RequeteApiService  {
 
   constructor(private http: HttpClient) { }
 
+
   InscriptionUser(email:string, password: string, confirmPassword: string, name: string, lastName: string): Observable<InscriptionModelModule> {
     return this.http.post<InscriptionModelModule>("http://localhost:3000/api/signUp", {email,password,confirmPassword,name,lastName})
+    .pipe(
+
+      catchError(this.handleError)
+    )
+  }
+
+  ConnexionUser(email: string, password: string): Observable<InscriptionModelModule>{
+    return this.http.post<InscriptionModelModule>("http://localhost:3000/api/signIn", {email,password}
+    )
     .pipe(
       catchError(this.handleError)
     )
   }
 
+  //message error
   private handleError(error: HttpErrorResponse) {
     if (error.status === 0) {
       // A client-side or network error occurred. Handle it accordingly.
@@ -33,6 +44,7 @@ export class RequeteApiService {
     // Return an observable with a user-facing error message.
        return throwError(() => new Error(error.error));
   }
+
 
 
 }
