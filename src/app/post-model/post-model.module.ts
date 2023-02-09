@@ -2,9 +2,9 @@
 export class PostModelModule {
 
   constructor(
-    public _id: string,
-    public id_poster: string,
-    public post : string
+    public _id: any,
+    public id_poster: any,
+    public post : any
   ){}
 
 }

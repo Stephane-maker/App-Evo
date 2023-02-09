@@ -1,9 +1,11 @@
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
+import { catchError, map, retry } from 'rxjs/operators';
 import { PostModelModule } from '../post-model/post-model.module';
 import { InscriptionModelModule } from '../inscription-model/inscription-model.module';
+import { AllPostModule } from '../all-post/all-post.module';
+
 
 
 @Injectable({
@@ -28,6 +30,14 @@ export class RequeteApiService  {
     .pipe(
       catchError(this.handleError)
     )
+  }
+
+  getAllPost(): Observable<AllPostModule[]>{
+    return this.http.get<AllPostModule[]>('http://localhost:3000/api/' )
+    .pipe(
+      catchError(this.handleError)
+    )
+
   }
 
   //message error

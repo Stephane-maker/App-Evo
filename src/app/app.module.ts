@@ -13,6 +13,7 @@ import { ConnexionUserComponent } from './connexion-user/connexion-user.componen
 import { MatInputModules } from './mat-input-app/mat-input.module';
 import { PageAccueilleComponent } from './page-accueille/page-accueille.component';
 import { InterptorTokenService } from './interceptorToken/interptor-token.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 
@@ -21,7 +22,8 @@ import { InterptorTokenService } from './interceptorToken/interptor-token.servic
     AppComponent,
     PageInscriptionComponent,
     ConnexionUserComponent,
-    PageAccueilleComponent
+    PageAccueilleComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
