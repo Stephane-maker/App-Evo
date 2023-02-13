@@ -11,9 +11,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { ConnexionUserComponent } from './connexion-user/connexion-user.component';
 import { MatInputModules } from './mat-input-app/mat-input.module';
-import { PageAccueilleComponent } from './page-accueille/page-accueille.component';
+
 import { InterptorTokenService } from './interceptorToken/interptor-token.service';
 import { NotFoundComponent } from './not-found/not-found.component';
+
+
+import { PageAccueilleComponent } from './page-accueille/page-accueille.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { DialogAddPostComponent } from './dialog-add-post/dialog-add-post.component';
+
+
+
+
 
 
 
@@ -23,7 +33,10 @@ import { NotFoundComponent } from './not-found/not-found.component';
     PageInscriptionComponent,
     ConnexionUserComponent,
     PageAccueilleComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    NavBarComponent,
+    DialogAddPostComponent
+
   ],
   imports: [
     BrowserModule,
@@ -31,7 +44,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     BrowserAnimationsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    MatInputModules
+    MatInputModules,
+    FontAwesomeModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: InterptorTokenService, multi: true}],
 
