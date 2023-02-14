@@ -2,16 +2,18 @@
 
 
 <div class="container">
-  <button mat-button (click)="openDialog()">Launch dialog</button>
+  <mat-card class="post">
+    <button mat-button (click)="openDialog()">Add a post</button>
+  </mat-card>
 <div *ngFor="let datas of data">
   <mat-card class="example-card">
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>Shiba Inu</mat-card-title>
-      <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+      <mat-card-title>{{this.datas.name}}</mat-card-title>
+      <mat-card-subtitle>{{this.datas.last_name}}</mat-card-subtitle>
     </mat-card-header>
-    <div *ngIf="this.datas.img ">
-      <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+    <div *ngIf="this.datas.img">
+      <img mat-card-image [src]="this.datas.img" alt="Photo of a Shiba Inu">
     </div>
     <mat-card-content>
       <p>

@@ -1,0 +1,35 @@
+<div *ngIf="this.verifHref == true">
+  <app-nav-bar></app-nav-bar>
+</div>
+<mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let datas of data">
+    <div class="container">
+      <div class="container-post">
+        <mat-card>
+          <mat-card-header>
+              <mat-card class="example-card">
+                <mat-card-header>
+                  <div mat-card-avatar class="example-header-image"></div>
+                  <mat-card-title>{{this.datas.name}}</mat-card-title>
+                  <mat-card-subtitle>{{this.datas.last_name}}</mat-card-subtitle>
+                </mat-card-header>
+
+                <mat-card-content>
+                  <p>
+                    {{this.datas.post}}
+                  </p>
+                </mat-card-content>
+                <mat-card-actions>
+                  <button mat-button>Ecrire</button>
+                  <button mat-button>Supprimer</button>
+                  <button mat-icon-button  aria-label="Example icon-button with a menu">
+                    <mat-icon>more_vert</mat-icon>
+                  </button>
+                </mat-card-actions>
+              </mat-card>
+          </mat-card-header>
+        </mat-card>
+      </div>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>

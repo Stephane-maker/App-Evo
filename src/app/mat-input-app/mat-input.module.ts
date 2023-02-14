@@ -8,7 +8,9 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatMenuModule} from '@angular/material/menu';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-
+import {MatTableModule} from '@angular/material/table'
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatGridListModule} from '@angular/material/grid-list';
 @NgModule({
   declarations: [],
   imports: [
@@ -22,7 +24,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     MatButtonModule,
     MatMenuModule,
     FontAwesomeModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatTabsModule,
+    MatGridListModule
   ]
 })
 export class MatInputModules { }

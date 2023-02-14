@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RequeteApiService } from '../requete/requete-api.service';
+import { RequeteApiService } from '../../core/requete/requete-api.service';
 import { Router } from '@angular/router';
-import { InterptorTokenService } from '../interceptorToken/interptor-token.service';
+import { InterptorTokenService } from '../../core/interceptorToken/interptor-token.service';
 import { HttpHandler, HttpRequest } from '@angular/common/http';
 import { Observable } from 'rxjs';
 

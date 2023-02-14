@@ -1,0 +1,39 @@
+<div class="container">
+
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-subtitle>Lorem ipsum</mat-card-subtitle>
+    </mat-card-header>
+
+    <mat-card-content>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email</mat-label>
+          <input type="email" matInput placeholder="Email" >
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput placeholder="Password">
+        </mat-form-field>
+      </form>
+      <mat-card-content>
+        <button mat-raised-button (click)="goToAccueil()">Sign-In</button>
+        <br />
+        <div>
+          <p>Forget your password ? <a href="#">Click here</a></p>
+        </div>
+      </mat-card-content>
+    </mat-card-content>
+    <div>
+      <hr>
+    </div>
+    <mat-card-actions>
+      <div>
+        <button (click)="goTosignIn()" mat-raised-button>Sign-In</button>
+        <button (click)="goToSignUp()" mat-raised-button>Sign-Up</button>
+        </div>
+    </mat-card-actions>
+  </mat-card>
+
+
+</div>

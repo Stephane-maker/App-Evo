@@ -1,7 +1,15 @@
 
 <mat-toolbar>
-  <span>My Application</span>
+  <span class="title" (click)="goToHome()">My Application</span>
+  <div class="container-navList">
 
+        <fa-icon (click)="openDialogForConversation()" [icon]="faComment"></fa-icon>
+
+        <fa-icon (click)="goToProfil()" [icon]="faUser"></fa-icon>
+
+        <fa-icon (click)="goToFriend()"  [icon]="faUserGroup"></fa-icon>
+
+  </div>
   <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
     <mat-icon>more_vert</mat-icon>
   </button>

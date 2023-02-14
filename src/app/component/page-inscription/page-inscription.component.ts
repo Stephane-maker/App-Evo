@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { RequeteApiService } from '../requete/requete-api.service';
+import { RequeteApiService } from '../../core/requete/requete-api.service';
 
 
 @Component({

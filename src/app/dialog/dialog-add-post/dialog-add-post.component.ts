@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { faLink, faImage } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-dialog-add-post',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./dialog-add-post.component.scss']
 })
 export class DialogAddPostComponent {
-
+  faLink = faLink;
+  faImage = faImage;
 }

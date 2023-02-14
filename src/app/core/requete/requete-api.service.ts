@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map, retry } from 'rxjs/operators';
-import { PostModelModule } from '../post-model/post-model.module';
+
 import { InscriptionModelModule } from '../inscription-model/inscription-model.module';
 import { AllPostModule } from '../all-post/all-post.module';
 
