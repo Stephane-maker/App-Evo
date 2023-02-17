@@ -7,6 +7,8 @@ mat-grid-tile {
 .example-card {
   max-width: 400px;
   margin: 5% 0 5% 0;
+  background-color: #121212;
+  color: white;
 
 }
 
@@ -14,14 +16,18 @@ mat-grid-tile {
   background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
   background-size: cover;
 }
-
+.main{
+  display: flex;
+  align-items: row;
+  flex-wrap: wrap;
+  height: 1000px;
+  background-color: #282828;
+}
 .container{
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-
-  margin: 4% 0 2% 0;
+  margin: 0% 2% 0% 2%;
   & img{
     max-width: 400px;
   }

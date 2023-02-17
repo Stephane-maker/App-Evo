@@ -1,15 +1,16 @@
 img{
   max-width: 400px;
 }
-// .test{
-//   border: 1px solid black;
-//   max-width: 300px!important;
-// }
+.test{
+  background-color: #282828;
+  color: white;
+}
 
 @media screen and (max-width:425px) and (min-width:376px) {
 
   .test{
     width: 420px!important;
+
   }
   .container{
     width: 420px!important;

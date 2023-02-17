@@ -1,8 +1,8 @@
 
 .example-card {
-  max-width: 400px;
-  margin: 5% 0 5% 0;
-
+  max-width: 600px;
+  background-color: #121212;
+  color: white;
 }
 
 .example-header-image {
@@ -10,22 +10,22 @@
   background-size: cover;
 }
 .post{
- margin: 5% 0 5% 0;
+
  width: 25%;
 }
 .container{
+  background-color: #282828;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
-  margin: 2% 0 2% 0;
+
   & img{
-    max-width: 400px;
+   max-width: 600px;
+
   }
-  &-post{
-    margin: 2% 0 2% 0;
-  }
+
 }
 
 @media screen and (max-width:425px) and (min-width:376px) {
