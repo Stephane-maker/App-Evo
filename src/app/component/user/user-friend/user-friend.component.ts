@@ -25,5 +25,6 @@ export class UserFriendComponent {
     if (document.location.href == 'http://localhost:4200/friend') {
       this.verifHref = true;
     }
+
   }
 }

@@ -28,7 +28,7 @@ export class ConnexionUserComponent {
   connect() {
     this.RAS.ConnexionUser(this.connexionForm.value.email, this.connexionForm.value.passsword).subscribe(data => {
       console.log(data.token);
-      this.router.navigateByUrl('accueille');
+      this.router.navigateByUrl('evo/accueille');
       localStorage.setItem('token', JSON.stringify(data.token));
     }, (err) => { console.log(err); });
   }

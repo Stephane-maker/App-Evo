@@ -15,6 +15,6 @@ export class RedirectingConnexionComponent {
     this.router.navigateByUrl("sign-up");
   }
   goToAccueil(){
-    this.router.navigateByUrl("accueille");
+    this.router.navigateByUrl("evo/accueille");
   }
 }

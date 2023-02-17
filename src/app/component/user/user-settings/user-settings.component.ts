@@ -87,7 +87,4 @@ export class UserSettingsComponent {
 
   constructor(private fb: FormBuilder) {}
 
-  onSubmit(): void {
-    alert('Thanks!');
-  }
 }

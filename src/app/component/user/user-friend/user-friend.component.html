@@ -1,8 +1,8 @@
 <div *ngIf="this.verifHref == true">
   <app-nav-bar></app-nav-bar>
 </div>
-<mat-grid-list cols="2" rowHeight="2:1">
-  <mat-grid-tile *ngFor="let datas of data">
+
+  <div *ngFor="let datas of data">
     <div class="container">
       <div class="container-post">
         <mat-card>
@@ -31,5 +31,5 @@
         </mat-card>
       </div>
     </div>
-  </mat-grid-tile>
-</mat-grid-list>
+  </div>
+

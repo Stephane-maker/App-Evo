@@ -21,12 +21,12 @@ export class NavBarComponent {
     });
   }
   goToProfil(){
-    this.router.navigateByUrl('profil')
+    this.router.navigateByUrl('evo/profil')
   }
   goToHome(){
-    this.router.navigateByUrl('accueille');
+    this.router.navigateByUrl('evo/accueille');
   }
   goToFriend(){
-    this.router.navigateByUrl('friend')
+    this.router.navigateByUrl('evo/friend')
   }
 }

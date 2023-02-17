@@ -11,6 +11,10 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {MatTableModule} from '@angular/material/table'
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatGridListModule} from '@angular/material/grid-list';
+
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+
 @NgModule({
   declarations: [],
   imports: [
@@ -27,7 +31,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatDialogModule,
     MatTableModule,
     MatTabsModule,
-    MatGridListModule
+    MatGridListModule,
+    MatSelectModule,
+    MatRadioModule
   ]
 })
 export class MatInputModules { }
