@@ -1,0 +1,26 @@
+a{
+  outline: none;
+  color: white!important;
+}
+.mat-elevation-z8{
+  width: 600px;
+  background-color: #121212;
+  color: white!important;
+
+  & td , th {
+    color: white;
+  }
+}
+.margin{
+  height: 50px;
+  background-color: #282828;
+}
+td{
+  border: 1px solid white!important;
+  border-left: none!important;
+  border-right: none!important;;
+}
+.container{
+  background-color: #282828;
+  height: 1000px;
+}

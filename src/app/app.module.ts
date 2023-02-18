@@ -20,9 +20,9 @@ import { RedirectingConnexionComponent } from './redirecting-connexion/redirecti
 import { DialogConversationUserComponent } from './dialog/dialog-conversation-user/dialog-conversation-user.component';
 
 import { EvoModuleModule } from './component/evo-module.module';
-import { EvoRouterModule } from './component/evo-router/evo-router.module';
-import { evoRouterRoutingModule } from './component/evo-router/evo-router-routing.modules';
-import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '@angular/common';
+
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 
 @NgModule({
@@ -32,6 +32,7 @@ import { APP_BASE_HREF, HashLocationStrategy, LocationStrategy } from '@angular/
     DialogAddPostComponent,
     RedirectingConnexionComponent,
     DialogConversationUserComponent,
+
   ],
   imports: [
     BrowserModule,

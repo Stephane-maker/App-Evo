@@ -27,6 +27,6 @@ export class NavBarComponent {
     this.router.navigateByUrl('evo/accueille');
   }
   goToFriend(){
-    this.router.navigateByUrl('evo/friend')
+    this.router.navigateByUrl('evo/friend');
   }
 }

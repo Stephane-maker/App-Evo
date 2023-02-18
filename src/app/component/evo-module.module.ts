@@ -12,6 +12,9 @@ import { UserSettingsComponent } from './user/user-settings/user-settings.compon
 import { UserFriendComponent } from './user/user-friend/user-friend.component';
 import { UserPostComponent } from './user/user-post/user-post.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ShowAllConversationComponent } from './show-all-conversation/show-all-conversation.component';
+import { FriendConversationComponent } from './friend-conversation/friend-conversation.component';
+
 
 
 @NgModule({
@@ -25,11 +28,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     UserSettingsComponent,
     UserFriendComponent,
     UserPostComponent,
+    ShowAllConversationComponent,
+    FriendConversationComponent,
+
   ],
   imports: [
     CommonModule,
     MatInputModules,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
 
   exports: [

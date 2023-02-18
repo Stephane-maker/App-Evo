@@ -48,6 +48,7 @@ export class PageAccueilleComponent {
   //       this.id = element.id;
   //     }
   // })
+
 }
   openDialog() {
     const dialogRef = this.dialog.open(DialogAddPostComponent);

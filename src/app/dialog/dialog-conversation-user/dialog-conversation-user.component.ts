@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { Router } from '@angular/router';
 
 export interface PeriodicElement {
   name: string;
@@ -31,4 +32,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class DialogConversationUserComponent {
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
+  constructor(private router: Router){}
+
+  goToConversation(){
+    this.router.navigateByUrl("evo/all-conversation");
+  }
+  goToConversationById(id: number){
+    this.router.navigateByUrl(`evo/conversation/${id}`);
+  }
 }
