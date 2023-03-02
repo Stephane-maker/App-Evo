@@ -15,27 +15,22 @@
 }
 .container{
   background-color: #282828;
+  height: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
-
-
   & img{
-   max-width: 600px;
-
+  max-width: 600px;
   }
 
 }
 
 @media screen and (max-width:425px) and (min-width:376px) {
-
   .container {
     margin: auto;
     max-width: 405px;
     &-post{
       max-width: 405px;
-
     }
   }
   .example-card{
@@ -49,13 +44,11 @@
   }
 }
 @media screen and (max-width:375px) and (min-width:321px) {
-
   .container {
     margin: auto;
     max-width: 350px!important;
     &-post{
       max-width: 350px!important;
-
     }
     img{
       max-width: 350px;
@@ -73,14 +66,12 @@
 }
 
 @media screen and (max-width:320px){
-
   .container {
     background-color: red;
     margin: auto;
     max-width: 300px!important;
     &-post{
       max-width: 300px!important;
-
     }
     img{
       max-width: 295px;

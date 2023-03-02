@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'all-conversation', component: ShowAllConversationComponent },
   { path: 'conversation/:id', component: FriendConversationComponent },
   { path: 'accueille', component: PageAccueilleComponent },
-  { path: 'profil' , component: PageProfilComponent },
+  { path: 'profil/:id' , component: PageProfilComponent },
   { path: 'friend' , component: UserFriendComponent },
   { path: '**', component: NotFoundComponent }
 ]

@@ -5,6 +5,11 @@ import { catchError, map, retry } from 'rxjs/operators';
 
 import { InscriptionModelModule } from '../inscription-model/inscription-model.module';
 import { AllPostModule } from '../all-post/all-post.module';
+import { PostModelModule } from '../post-model/post-model.module';
+import { ModelFriendModule } from '../model-friend/model-friend.module';
+import { ModelConversationModule } from '../model-conversation/model-conversation.module';
+
+
 
 
 
@@ -19,7 +24,6 @@ export class RequeteApiService  {
   InscriptionUser(email:string, password: string, confirmPassword: string, name: string, lastName: string): Observable<InscriptionModelModule> {
     return this.http.post<InscriptionModelModule>("http://localhost:3000/api/signUp", {email,password,confirmPassword,name,lastName})
     .pipe(
-
       catchError(this.handleError)
     )
   }
@@ -37,8 +41,28 @@ export class RequeteApiService  {
     .pipe(
       catchError(this.handleError)
     )
-
   }
+  getFriendUser(id:any): Observable<ModelFriendModule[]>{
+    return this.http.get<ModelFriendModule[]>(`http://localhost:3000/api/friend/${id}` )
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+  getAllConversationUser(): Observable<ModelConversationModule[]>{
+    return this.http.get<ModelConversationModule[]>(`http://localhost:3000/api/conversation` )
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
+  getPostprofilUser(id: any): Observable<PostModelModule[]> {
+    console.log(`http://localhost:3000/api/profil/${id}`)
+    return this.http.get<PostModelModule[]>(`http://localhost:3000/api/profil/${id}`, )
+    .pipe(
+      catchError(this.handleError)
+    )
+  }
+
 
   //message error
   private handleError(error: HttpErrorResponse) {

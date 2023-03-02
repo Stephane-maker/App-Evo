@@ -10,6 +10,7 @@ import { DialogConversationUserComponent } from '../../dialog/dialog-conversatio
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
+  id!: any;
   faComment = faComment;
   faUser = faUser;
   faUserGroup = faUserGroup;
@@ -21,7 +22,8 @@ export class NavBarComponent {
     });
   }
   goToProfil(){
-    this.router.navigateByUrl('evo/profil')
+    this.id = localStorage.getItem("token")?.split("\"")[1];
+    this.router.navigateByUrl(`evo/profil/${this.id}`)
   }
   goToHome(){
     this.router.navigateByUrl('evo/accueille');

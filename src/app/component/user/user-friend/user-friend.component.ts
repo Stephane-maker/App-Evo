@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RequeteApiService } from '../../../core/requete/requete-api.service';
 
 @Component({
   selector: 'app-user-friend',
@@ -6,17 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./user-friend.component.scss']
 })
 export class UserFriendComponent {
-  data:any = [{
-    id : 1,
-    name: 'Ellyn',
-    last_name: 'Rouden',
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  },{
-    id : 1,
-    name: 'Ellyn',
-    last_name: 'Rouden',
-    post: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-  }];
+  data:any;
   verifHref!: boolean;
 
   ngOnInit(): void {
@@ -25,6 +16,12 @@ export class UserFriendComponent {
     if (document.location.href == 'http://localhost:4200/#/evo/friend') {
       this.verifHref = true;
     }
-
+    this.RAS.getFriendUser(localStorage.getItem("token")?.split("\"")[1]).subscribe(data => {
+      this.data = data;
+      console.log(data)
+    }, err => {
+      console.log(err)
+    })
   }
+  constructor(private RAS: RequeteApiService){}
 }

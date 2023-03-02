@@ -10,7 +10,7 @@
     <mat-card-header>
       <div mat-card-avatar class="example-header-image"></div>
       <mat-card-title>{{this.datas.name}}</mat-card-title>
-      <mat-card-subtitle>{{this.datas.last_name}}</mat-card-subtitle>
+      <mat-card-subtitle class="c-white">{{this.datas.last_name}}</mat-card-subtitle>
     </mat-card-header>
     <div *ngIf="this.datas.img">
       <img mat-card-image [src]="this.datas.img" alt="Photo of a Shiba Inu">
@@ -21,8 +21,8 @@
       </p>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button>LIKE</button>
-      <button mat-button>SHARE</button>
+      <button mat-button class="c-white">LIKE</button>
+      <button mat-button class="c-white">SHARE</button>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
